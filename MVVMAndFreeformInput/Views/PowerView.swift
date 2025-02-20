@@ -73,6 +73,7 @@ struct PowerView: View {
             // Extra space at bottom
             Spacer()
         }
+        .navigationTitle("Powers")
         .padding()
     }
 
