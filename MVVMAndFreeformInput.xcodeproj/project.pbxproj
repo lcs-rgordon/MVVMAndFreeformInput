@@ -12,6 +12,7 @@
 		8178410F2D666D8800A095C4 /* MVVMAndFreeformInputApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178410A2D666D8800A095C4 /* MVVMAndFreeformInputApp.swift */; };
 		817841102D666D8800A095C4 /* PowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178410B2D666D8800A095C4 /* PowerView.swift */; };
 		817841162D66728D00A095C4 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817841152D66728D00A095C4 /* Power.swift */; };
+		817E96FA2D67524A0021AAD1 /* PowerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E96F92D67524A0021AAD1 /* PowerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		8178410A2D666D8800A095C4 /* MVVMAndFreeformInputApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMAndFreeformInputApp.swift; sourceTree = "<group>"; };
 		8178410B2D666D8800A095C4 /* PowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerView.swift; sourceTree = "<group>"; };
 		817841152D66728D00A095C4 /* Power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
+		817E96F92D67524A0021AAD1 /* PowerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 		817841072D666D8800A095C4 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				817E96F92D67524A0021AAD1 /* PowerViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				817E96FA2D67524A0021AAD1 /* PowerViewModel.swift in Sources */,
 				8178410F2D666D8800A095C4 /* MVVMAndFreeformInputApp.swift in Sources */,
 				817841162D66728D00A095C4 /* Power.swift in Sources */,
 				817841102D666D8800A095C4 /* PowerView.swift in Sources */,
