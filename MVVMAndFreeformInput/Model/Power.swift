@@ -7,9 +7,16 @@
 
 import Foundation
 
-struct Power {
+struct Power: Identifiable {
     
     // MARK: Stored properties
+    
+    // A unique identifier
+    //
+    // As soon as an instance of this power is created, a unique identifier
+    // such as "E621E1F8-C36C-495A-93FC-0C247A3E6E5F" is assigned to the "id"
+    // property
+    let id = UUID()
     
     // The base of the power can hold any numeric value
     var base: Double

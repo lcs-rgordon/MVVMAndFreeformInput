@@ -18,39 +18,51 @@ struct PowerView: View {
     // MARK: Computed properties
     var body: some View {
         VStack {
-            
-            // Extra space at top
-            Spacer()
-            
+                        
             // OUTPUT
             // When the power can be unwrapped, show the result
             if let power = viewModel.power {
                 
-                // Show the provided base, exponent, and result
-                // in an arrangement that looks the same as how
-                // we write a power on paper in math class
-                HStack(alignment: .center) {
-                    HStack(alignment: .top) {
-                        
-                        Text("\(power.base.formatted())")
-                            .font(.system(size: 96))
-                        
-                        Text("\(power.exponent)")
-                            .font(.system(size: 44))
-                    }
-                    HStack {
+                VStack(spacing: 0) {
+                    
+                    Spacer()
 
-                        Text("=")
-                            .font(.system(size: 96))
+                    // Show the provided base, exponent, and result
+                    // in an arrangement that looks the same as how
+                    // we write a power on paper in math class
+                    HStack(alignment: .center) {
+                        HStack(alignment: .top) {
+                            
+                            Text("\(power.base.formatted())")
+                                .font(.system(size: 96))
+                            
+                            Text("\(power.exponent)")
+                                .font(.system(size: 44))
+                        }
+                        HStack {
 
-                        Text("\(power.result.formatted())")
-                            .font(.system(size: 96))
+                            Text("=")
+                                .font(.system(size: 96))
+
+                            Text("\(power.result.formatted())")
+                                .font(.system(size: 96))
+                        }
                     }
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.5)
+
+                    // Add a button so that the result can be saved
+                    Button {
+                        viewModel.saveResult()
+                    } label: {
+                        Text("Save")
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .padding(.bottom)
+                    
                 }
-                .lineLimit(1)
-                .minimumScaleFactor(0.5)
-                .frame(height: 300)
-
+                .frame(height: 200)
+                
             } else {
                 
                 // Show a message indicating that we are
@@ -60,7 +72,7 @@ struct PowerView: View {
                     systemImage: "gear.badge.questionmark",
                     description: Text(viewModel.recoverySuggestion)
                 )
-                .frame(height: 300)
+                .frame(height: 200)
             }
             
             // INPUT
@@ -70,8 +82,19 @@ struct PowerView: View {
             TextField("Exponent", text: $viewModel.providedExponent)
                 .textFieldStyle(.roundedBorder)
 
-            // Extra space at bottom
-            Spacer()
+            // Show a title for the history
+            HStack {
+                Text("History")
+                    .bold()
+                Spacer()
+            }
+            .padding(.vertical)
+
+            // Iterate over the history of results
+            List(viewModel.resultHistory) { priorResult in
+                PowerItemView(power: priorResult)
+            }
+            .listStyle(.plain)
         }
         .navigationTitle("Powers")
         .padding()
@@ -80,5 +103,7 @@ struct PowerView: View {
 }
 
 #Preview {
-    PowerView()
+    NavigationStack {
+        PowerView()
+    }
 }
