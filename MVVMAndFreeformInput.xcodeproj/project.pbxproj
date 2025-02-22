@@ -13,6 +13,7 @@
 		817841102D666D8800A095C4 /* PowerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8178410B2D666D8800A095C4 /* PowerView.swift */; };
 		817841162D66728D00A095C4 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817841152D66728D00A095C4 /* Power.swift */; };
 		817E96FA2D67524A0021AAD1 /* PowerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E96F92D67524A0021AAD1 /* PowerViewModel.swift */; };
+		817E97302D6A0C800021AAD1 /* PowerItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 817E972F2D6A0C800021AAD1 /* PowerItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		8178410B2D666D8800A095C4 /* PowerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerView.swift; sourceTree = "<group>"; };
 		817841152D66728D00A095C4 /* Power.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
 		817E96F92D67524A0021AAD1 /* PowerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerViewModel.swift; sourceTree = "<group>"; };
+		817E972F2D6A0C800021AAD1 /* PowerItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				8178410B2D666D8800A095C4 /* PowerView.swift */,
+				817E972F2D6A0C800021AAD1 /* PowerItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				8178410F2D666D8800A095C4 /* MVVMAndFreeformInputApp.swift in Sources */,
 				817841162D66728D00A095C4 /* Power.swift in Sources */,
 				817841102D666D8800A095C4 /* PowerView.swift in Sources */,
+				817E97302D6A0C800021AAD1 /* PowerItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
